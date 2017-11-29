@@ -1,0 +1,12 @@
+<h1>Film</h1>
+
+<p>
+	Titre: <%= @movie.title %>
+</p>
+
+<p>
+	Description: <%= @movie.description %>
+</p>
+
+<%= link_to "Modifier ce film", edit_movie_path(@movie) %> |
+<%= link_to "Retour à la liste des films", movies_path %>
