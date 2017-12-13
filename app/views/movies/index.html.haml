@@ -1,0 +1,14 @@
+%h1{:align => "center"} Tout les films
+- @movies.each do |movie|
+  .row
+    .col-xs-8.col-xs-offset-2
+      .well.well-lg
+        .movie-title
+          = link_to movie.title, movie_path(movie)
+        .movie-body
+          = truncate(movie.description, length: 100)
+        .movie-actions
+          = link_to "Modifier le film", edit_movie_path(movie), class: "btn btn-xs btn-primary"
+          = link_to "Supprimer le film", movie_path(movie), method: :delete, |
+            data: { confirm: "Êtes vous sur ?"},      |
+            class: "btn btn-xs btn-danger"                                         |
