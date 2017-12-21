@@ -1,0 +1,11 @@
+%h2{:align => "center"}
+  Title: #{@serie.title}
+.well.col-xs-8.col-xs-offset-2
+  %h4.center.description
+    %strong Description:
+  %hr
+  = simple_format(@serie.description)
+  .serie-actions
+    = link_to "Modifier le film", edit_serie_path(@serie), class: "btn btn-xs btn-primary"
+    = link_to "Supprimer le film", serie_path(@serie), method: :delete, data: { confirm: "Êtes vous sur ?"}, class: "btn btn-xs btn-danger"                                          |
+    = link_to "Voir tout les films", series_path, class: "btn btn-xs btn-success"

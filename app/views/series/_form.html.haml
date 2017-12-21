@@ -4,10 +4,10 @@
 -# 		- @movie.errors.full_messages.each do |msg|
 -# 			%li= msg 
 
-= simple_form_for @movie do |f|
+= simple_form_for @serie do |f|
 	= f.input :title
 	= f.input :description
 
 	= f.submit
 
-= link_to "Retour à la liste des films", movies_path
+= link_to "Retour à la liste des séries", series_path

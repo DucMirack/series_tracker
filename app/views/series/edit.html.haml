@@ -1,8 +1,8 @@
-%h1 Modification d'un film
+%h1 Modification d'une série
 -# - if @movie.errors.any?
 -#   %h2 Erreurs empechant le film d'être modifié
 -#   %ul
 -#     - @movie.errors.full_messages.each do |msg|
 -#       %li= msg
 = render 'form'
-= link_to "Retour à la liste des films", movies_path
+= link_to "Retour à la liste des séries", series_path
