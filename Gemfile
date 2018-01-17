@@ -35,7 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # 
 gem 'haml'
 gem 'simple_form'
-
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
