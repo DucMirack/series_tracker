@@ -45,7 +45,7 @@ class SeriesController < ApplicationController
 		end
 
 		def serie_params
-			params.require(:serie).permit(:title, :description)
+			params.require(:serie).permit(:title, :description, :profile_image, :remove_profile_image)
 		end
 
 end

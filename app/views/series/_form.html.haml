@@ -1,12 +1,16 @@
--# - if @movie.errors.any?
--# 	%h2 The following errors prevented the movie from getting created
--# 	%ul
--# 		- @movie.errors.full_messages.each do |msg|
--# 			%li= msg 
+- if @serie.errors.any?
+	%h2 Les erreurs suivantes ont été rencontrées
+	%ul
+		- @serie.errors.full_messages.each do |msg|
+			%li= msg 
 
 = simple_form_for @serie do |f|
 	= f.input :title
 	= f.input :description
+	= f.file_field :profile_image
+	- if f.object.profile_image?
+		= image_tag f.object.profile_image.thumb.url
+		= f.input :remove_profile_image, as: :boolean
 
 	= f.submit
 
