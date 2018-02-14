@@ -1,28 +1,30 @@
-.navbar-custom {
-	background-color: black; 
+@import "bootstrap-variables";
+
+.navbar {
+	background-color: $navbar-bg-color; 
+}
+
+.nav-item{
+	margin: 0 10px 0 10px;
+}
+
+.nav-item a, .nav-item a:hover{
+	font-family: $font-family-nav-item;
+	font-size: $font-size-base;
+	color: $white;
 }
 
 #logo{
 	float: left;
-	font-size: 1.7em;
+	font-size: $font-size-lg;
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-weight: bold;
 }
 
-#logo:hover{
-	color: #fff;
-	text-decoration: none;
-}
-
 .center {
 	text-align: center;
-}
-
-.btn-xlarge {
-	font-size: 1.7em;
-	background-color: black;
 }
 
 footer {
@@ -44,11 +46,6 @@ list-style: none;
 footer ul li {
 float: left;
 margin-left: 15px;
-}
-
-.movie-actions {
-border-top: 1px solid #eaeaea;
-padding-top: 5px;
 }
 
 .description {
