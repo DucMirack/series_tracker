@@ -1,6 +1,3 @@
--# %h2{:align => "center"}
--#   .serie-profile-image
--#     = image_tag @serie.profile_image
 %h1.card-title
   = @serie.title
 .card-single
@@ -8,3 +5,17 @@
   .card-body
     %p.card-text 
       = @serie.description
+  .list-group{:id => "accordian"}
+    - @serie.episodes.group_by(&:season).each do |season, episodes|
+      .panel.panel-default
+        .panel-heading
+          %h4.panel-title
+            %a.list-group-item.accordion-toggle{"data-toggle" => "collapse", "data-parent" => "#accordion", :href => "##{season}"}
+              = "Saison" + season.to_s
+        .panel-collapse.collapse{:id => "#{season}"}
+          .panel-body
+            %ul
+              - episodes.each do |episode|
+                %li.list-group-item
+                  = episode.human_name
+                  = check_box_tag('seen', 'seen', episode.seen, :onClick => "episode.switch_seen")
