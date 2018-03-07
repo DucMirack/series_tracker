@@ -19,13 +19,22 @@
 	margin-top: 20px;
 }
 
-.card{
+.card-deck .card{
 	margin: 30px 30px 30px 30px;
 	height: 400px;
 }
 
-.card .card-img-top {
+.card-deck .card-img-top {
 	height: 200px;
+}
+
+.card-single {
+	text-align: center;
+}
+
+.card-single .card-img-top {
+	height: 400px;
+	width: 696px;
 }
 
 #logo{
