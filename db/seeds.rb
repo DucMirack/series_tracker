@@ -24,3 +24,13 @@ the_punisher = Serie.create(
 	title: "The Punisher",
 	description: "Après s’être vengé de ceux responsables de la mort de sa femme et de ses enfants, Frank Castle décèle un complot qui va bien plus loin que le milieu des criminels newyorkais. Désormais connu à travers toute la ville comme The Punisher, il doit découvrir la vérité sur les injustices qui l’entourent et touchent bien plus que sa seule famille.",
 	profile_image: link_profile_image('the-punisher.jpg'))
+
+mr_robot.episodes.create(season: 1, number: 1, title: "A title", description: "A long long description", duration: 40)
+mr_robot.episodes.create(season: 1, number: 2, title: "A title", description: "A long long description", duration: 40)
+mr_robot.episodes.create(season: 1, number: 3, title: "A title", description: "A long long description", duration: 40)
+mr_robot.episodes.create(season: 2, number: 1, title: "A title", description: "A long long description", duration: 40)
+mr_robot.episodes.create(season: 2, number: 2, title: "A title", description: "A long long description", duration: 40)
+mr_robot.episodes.create(season: 2, number: 3, title: "A title", description: "A long long description", duration: 40)
+mr_robot.episodes.create(season: 2, number: 4, title: "A title", description: "A long long description", duration: 40)
+mr_robot.episodes.create(season: 3, number: 1, title: "A title", description: "A long long description", duration: 40)
+mr_robot.episodes.create(season: 3, number: 2, title: "A title", description: "A long long description", duration: 40)
