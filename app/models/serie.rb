@@ -5,6 +5,7 @@ class Serie < ApplicationRecord
 	validates_processing_of :profile_image
 	validate :profile_image_size_validation
 
+	has_many :episodes
 
 	private
 		def profile_image_size_validation 
