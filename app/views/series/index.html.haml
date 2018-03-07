@@ -1,38 +1,15 @@
--# %h1{:align => "center"} Toutes les séries
--# - @series.each do |serie|
--#   .row
--#     .col-xs-8.col-xs-offset-2
--#       .well.well-lg
--#         -# .serie-profile-image
--#         -#   = image_tag serie.profile_image.thumb.url
--#         .serie-title
--#           = link_to serie.title, serie_path(serie)
--#         .serie-body
--#           = truncate(serie.description, length: 100)
--#         .serie-actions
--#           = link_to "Modifier la série", edit_serie_path(serie), class: "btn btn-xs btn-primary"
--#           = link_to "Supprimer la série", serie_path(serie), method: :delete, data: { confirm: "Êtes vous sur ?"}, class: "btn btn-xs btn-danger"
-
-.card-deck
-  .card
-    %img.card-img-top{:alt => "Card image cap", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-    .card-footer
-      %small.text-muted Last updated 3 mins ago
-  .card
-    %img.card-img-top{:alt => "Card image cap", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This card has supporting text below as a natural lead-in to additional content.
-    .card-footer
-      %small.text-muted Last updated 3 mins ago
-  .card
-    %img.card-img-top{:alt => "Card image cap", :src => "..."}/
-    .card-body
-      %h5.card-title Card title
-      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
-    .card-footer
-      %small.text-muted Last updated 3 mins ago
-
+%h1 Toutes les séries
+- @series.in_groups_of(3, false).each do |group_of_3_series|
+  .card-deck
+    - group_of_3_series.each do |serie|
+      .card
+        %img.card-img-top{:alt => "Pas d'image associé", :src => serie.profile_image}/
+        .card-body
+          %h5.card-title 
+            = serie.title
+          %p.card-text 
+            = truncate(serie.description, length: 190)
+            = link_to "En savoir plus", serie_path(serie)
+        .card-footer
+          %small.text-muted 
+            = link_to serie.title, serie_path(serie)
