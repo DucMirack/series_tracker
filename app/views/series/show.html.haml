@@ -18,4 +18,4 @@
               - episodes.each do |episode|
                 %li.list-group-item
                   = episode.human_name
-                  = check_box_tag('seen', 'seen', episode.seen, :onClick => "episode.switch_seen")
+                  = check_box_tag('seen_episode', '', episode.seen, data: {url: episode_is_seen_path(episode.id), remote: true})
