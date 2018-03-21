@@ -10,6 +10,9 @@ def link_profile_image(image)
 	File.open(File.join(Rails.root,'app/assets/images/'+image))
 end
 
+Serie.delete_all
+Episode.delete_all
+
 mr_robot = Serie.create(
 	title: "Mr Robot",
 	description: "Elliot est un jeune programmeur anti-social qui souffre d'un trouble du comportement qui le pousse à croire qu'il ne peut rencontrer des gens qu'en les hackant. Il travaille pour une firme spécialisée dans la cyber-sécurité mais un homme connu sous le nom de Mr Robot l'approche un jour pour faire tomber une compagnie surpuissante qui fait partie de celles qu'il doit justement protéger... ",
